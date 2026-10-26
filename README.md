@@ -33,4 +33,4 @@ Workaround: pass the loop values through `data-*` and read them from the element
 />
 ```
 
-Version: 2.0.0-rc.2.
+Version: 2.0.0-rc.4 (first reported on 2.0.0-rc.2). [#9231](https://github.com/QwikDev/qwik/pull/9231) in rc.4 fixed this for components with a block body. `Facets` here returns its JSX directly (`(props) => (...)`), which still fails. Changing only the body to `(props) => { return (...); }` builds `w([t,e])` and works.
